@@ -8,6 +8,9 @@ This repository gives you a good starting point with a Dockerfile, GitHub Action
 
 The access token will need to be added as an Action secret. [Create one](https://github.com/settings/tokens/new?description=Azure+Rust+Container+Apps+access&scopes=write:packages) with enough permissions to write to packages.
 
+Copy the generated token and add it as a [Github repository secret](/../../settings/secrets/actions/new) with the name `PAT`. (_If that link doesn't work, make sure you're reading this on your own copy of the repo, not the original template._)
+
+
 ## Create an Azure Service Principal
 
 You'll need the following:
@@ -18,6 +21,9 @@ You'll need the following:
 ```
 az ad sp create-for-rbac --name "CICD" --role contributor --scopes /subscriptions/$AZURE_SUBSCRIPTION_ID --sdk-auth
 ``` 
+
+Capture the output and add it as a [Github repository secret](/../../settings/secrets/actions/new) with the name `AZURE_CREDENTIALS`. (_If that link doesn't work, make sure you're reading this on your own copy of the repo, not the original template._)
+
 
 ## Azure Container Apps
 
