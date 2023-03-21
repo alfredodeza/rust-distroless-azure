@@ -1,0 +1,20 @@
+# create a github action workflow to lint dockerfiles using hadolint
+#
+
+name: Dockerfile Lint
+
+on:
+  pull_request:
+    paths:
+      - '**/Dockerfile'
+
+jobs:
+
+  dockerfile_lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # use hadolint to lint dockerfiles
+      - uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: Dockerfile
