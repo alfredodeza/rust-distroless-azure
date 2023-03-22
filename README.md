@@ -49,6 +49,8 @@ az containerapp logs  show  --name $CONTAINER_APP_NAME --resource-group $RESOURC
 
 Update both variables to match your environment
 
+**NOTE** Settings for Packages in your repo may need updating. Go to [Action Settings](/../../settings/actions) and scroll down to _"Workflow Permissions"_ and make sure it shows _"Read and write permissions"_ as selected, otherwise you'll see a `403 Forbidden`
+
 ## API Best Practices
 
 Although there are a few best practices for using the FastAPI framework, there are many different other suggestions to build solid HTTP APIs that can be applicable anywhere. 
