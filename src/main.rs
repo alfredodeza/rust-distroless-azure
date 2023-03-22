@@ -34,7 +34,6 @@ async fn tokenize_text(pretrained_model: String, text: String) -> Vec<String> {
     let tokens = encoded.get_tokens();
     let tokenized_values = Vec::from(tokens);
 
-    // return the tokenized values
     return tokenized_values;
 }
 
