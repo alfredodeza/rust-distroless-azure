@@ -54,7 +54,7 @@ async fn tokenize(
 
 #[get("/")]
 async fn index() -> impl Responder {
-    HttpResponse::Ok().body("<h1>Summarization Service</h1>")
+    HttpResponse::Ok().body("<h1>Summarization Service from Duke University</h1>")
 }
 
 #[actix_web::main]
