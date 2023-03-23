@@ -22,6 +22,8 @@ async fn tokenize_text(pretrained_model: String, text: String) -> Vec<String> {
         return Tokenizer::from_pretrained(pretrained_model, None);
     });
 
+    // shrey update this
+    // updated
     let tokenizer = handle.join().expect("Failed to join thread");
 
     // encode the text using the tokenizer
