@@ -72,3 +72,14 @@ Note that it is a good practice to use `404 Not Found` to protect from requests 
 | GET | POST | PUT | HEAD|
 |---|---|---|---|
 | Read Only | Write Only | Update existing | Does it exist? |
+
+
+### HOW TO USE:
+docker build . -t local-rust-distroless   
+docker images | grep local-rust-distroless   
+docker run -p 8000:8000 local-rust-distroless
+
+#### In a different terminal
+curl -X POST --data '{"text": "some text"}' --header "Content-Type: application/json" http://localhost:8000/tokenizers/bert-base-cased
+
+curl -X POST --data '{"text": "some text"}' --header "Content-Type: application/json" http://localhost:8000/tokenizers/bert-base-uncased
